@@ -1,0 +1,34 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('../img/banner.jpg'); /* Crie uma imagem banner.jpg */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+
+.item-produto {
+    transition: transform 0.2s ease-in-out;
+}
+
+.item-produto:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #d4a373;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #bc8a5f;
+}
