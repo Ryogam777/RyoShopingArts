@@ -3,117 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ryo Shopping Arts - Artesanato exclusivo em Ipatinga. Flores de EVA, Molduras de Gesso e Personalizados.">
-    <title>Ryo Shopping Arts | Galeria de Arte Manual 2026</title>
-    
-    <!-- Google Fonts Premium -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="RyoShopingArts - Artesanato em gesso, flores de EVA e decorações exclusivas.">
+    <title>RyoShopingArts | Loja Oficial</title>
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
-    
-    <!-- Font Awesome (Ícones) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navegação -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <span class="logo">RYO <span class="gold-text">ARTS</span></span>
-            <a href="https://wa.me" class="btn-contato-top">ENCOMENDAR</a>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">RyoShopingArts</a>
+            <button class="btn btn-outline-light d-lg-none" onclick="abrirModalCarrinho()">
+                🛒 <span class="cart-count badge bg-danger">0</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-lg-3" onclick="abrirModalCarrinho()">
+                            🛒 Carrinho (<span class="cart-count">0</span>)
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Seção Hero (Impacto) -->
-    <header class="hero">
-        <div class="hero-content">
-            <span class="pre-title">Artesanato Exclusivo em Ipatinga</span>
-            <h1>Transformando <br><span class="gold-text">Ideias em Arte</span></h1>
-            <p>Peças moldadas à mão para quem valoriza o detalhe, a durabilidade e o design exclusivo.</p>
-            <div class="hero-btns">
-                <a href="#galeria" class="btn-main">Ver Portfólio</a>
-                <a href="https://wa.me" class="btn-outline">Falar com Artesão</a>
-            </div>
+    <!-- Banner Principal -->
+    <header id="home" class="hero-section text-center text-white d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Arte que Transforma</h1>
+            <p class="lead">Bonecos de gesso, flores de EVA e decorações exclusivas feitas à mão.</p>
+            <a href="#produtos" class="btn btn-lg btn-warning mt-3">Ver Catálogo</a>
         </div>
     </header>
 
-    <!-- Seção Diferenciais (O que te faz profissional) -->
-    <section class="features">
-        <div class="feature-item">
-            <i class="fas fa-hand-sparkles"></i>
-            <h3>Feito à Mão</h3>
-            <p>Cada peça é única e recebe atenção total do início ao acabamento.</p>
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-shield-heart"></i>
-            <h3>Alta Durabilidade</h3>
-            <p>Materiais premium que garantem que sua arte dure por anos.</p>
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-truck-fast"></i>
-            <h3>Sob Encomenda</h3>
-            <p>Trabalhamos com prazos ágeis para Ipatinga e região.</p>
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold">Nossos Produtos</h2>
+        <div class="row g-4" id="vitrine">
+            <!-- Renderizado pelo JavaScript -->
         </div>
     </section>
 
-    <!-- Galeria de Produtos (Grade Inteligente Dupla) -->
-    <section id="galeria" class="gallery-section">
-        <h2 class="section-title">Nossas <span class="gold-text">Especialidades</span></h2>
-        <div class="gallery-grid">
-            <div class="card">
-                <div class="card-img"><img src="foto1.jpg" alt="Flores de EVA"></div>
-                <div class="card-body">
-                    <h3>Flores de EVA</h3>
-                    <p>Pétalas laváveis com realismo surpreendente.</p>
+    <!-- Modal do Carrinho -->
+    <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Seu Carrinho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-img"><img src="foto2.jpg" alt="Molduras de Gesso"></div>
-                <div class="card-body">
-                    <h3>Molduras de Gesso</h3>
-                    <p>O toque clássico que faltava na sua parede.</p>
+                <div class="modal-body">
+                    <div id="itens-carrinho">
+                        <!-- Itens aparecem aqui -->
+                    </div>
+                    <hr>
+                    <h4 class="text-end">Total: <span id="total-carrinho">R$ 0,00</span></h4>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-img"><img src="foto3.jpg" alt="Bonecos de Time"></div>
-                <div class="card-body">
-                    <h3>Times & Temas</h3>
-                    <p>Mascotes e personagens com pintura detalhada.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img"><img src="foto4.jpg" alt="Cofres de Gesso"></div>
-                <div class="card-body">
-                    <h3>Cofres Decorativos</h3>
-                    <p>Os tradicionais porquinhos com brilho luxuoso.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
+                    <button type="button" class="btn btn-success" onclick="finalizarPedido()">Finalizar no WhatsApp</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Seção Chamada Final (Conversão) -->
-    <section class="cta-final">
-        <div class="cta-container">
-            <h2>Pronto para dar vida ao seu projeto?</h2>
-            <p>O atendimento é feito pessoalmente via WhatsApp para definirmos cores, tamanhos e detalhes.</p>
-            <a href="https://wa.me?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="wa-large-btn">
-                <i class="fab fa-whatsapp"></i> INICIAR ORÇAMENTO AGORA
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-info">
-            <p><strong>Ryo Shopping Arts</strong></p>
-            <p>Ipatinga - Minas Gerais</p>
-            <p>Ryogamsilva@gmail.com</p>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 - Todos os direitos reservados.</p>
+    <!-- Rodapé -->
+    <footer id="sobre" class="bg-dark text-white py-5 mt-5">
+        <div class="container text-center">
+            <h3>RyoShopingArts</h3>
+            <p>Especialistas em gesso e decoração artesanal.</p>
+            <p>WhatsApp: (31) 9 9068-1284 | Email: ryogamsilva@gmail.com</p>
+            <div class="mt-4">
+                <small>© 2026 RyoShopingArts - Todos os direitos reservados.</small>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
