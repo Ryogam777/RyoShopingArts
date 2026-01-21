@@ -3,80 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryo Shopping Arts | Galeria de Artesanato</title>
+    <meta name="description" content="Ryo Shopping Arts - Artesanato exclusivo em Ipatinga. Flores de EVA, Molduras de Gesso e Personalizados.">
+    <title>Ryo Shopping Arts | Galeria de Arte Manual 2026</title>
+    
+    <!-- Google Fonts Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
+    
+    <!-- Font Awesome (Ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="luxury-bg"></div>
 
-    <div class="main-wrapper">
-        <header class="main-header">
-            <div class="ornament"><i class="fas fa-certificate"></i></div>
-            <h1>Ryo Shopping Arts</h1>
-            <p class="tagline">EXCELÊNCIA EM ARTESANATOS MANUAIS EM IPATINGA</p>
-        </header>
+    <!-- Header / Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">RYO <span class="gold-text">ARTS</span></span>
+            <a href="https://wa.me" class="btn-contato-top">ENCOMENDAR</a>
+        </div>
+    </nav>
 
-        <section class="gallery-grid">
-            <div class="art-card">
-                <div class="image-box">
-                    <img src="https://images.unsplash.com" alt="Flores de EVA">
-                    <div class="badge">Destaque</div>
-                </div>
-                <div class="art-info">
+    <!-- Seção Hero (Impacto) -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="pre-title">Artesanato Exclusivo em Ipatinga</span>
+            <h1>Transformando <br><span class="gold-text">Ideias em Arte</span></h1>
+            <p>Peças moldadas à mão para quem valoriza o detalhe, a durabilidade e o design exclusivo.</p>
+            <div class="hero-btns">
+                <a href="#galeria" class="btn-main">Ver Portfólio</a>
+                <a href="https://wa.me" class="btn-outline">Falar com Artesão</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Diferenciais (O que te faz profissional) -->
+    <section class="features">
+        <div class="feature-item">
+            <i class="fas fa-hand-sparkles"></i>
+            <h3>Feito à Mão</h3>
+            <p>Cada peça é única e recebe atenção total do início ao acabamento.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-shield-heart"></i>
+            <h3>Alta Durabilidade</h3>
+            <p>Materiais premium que garantem que sua arte dure por anos.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-truck-fast"></i>
+            <h3>Sob Encomenda</h3>
+            <p>Trabalhamos com prazos ágeis para Ipatinga e região.</p>
+        </div>
+    </section>
+
+    <!-- Galeria de Produtos (Grade Inteligente Dupla) -->
+    <section id="galeria" class="gallery-section">
+        <h2 class="section-title">Nossas <span class="gold-text">Especialidades</span></h2>
+        <div class="gallery-grid">
+            <div class="card">
+                <div class="card-img"><img src="foto1.jpg" alt="Flores de EVA"></div>
+                <div class="card-body">
                     <h3>Flores de EVA</h3>
-                    <p>Arranjos laváveis e moldados à mão com cores exclusivas.</p>
+                    <p>Pétalas laváveis com realismo surpreendente.</p>
                 </div>
             </div>
-
-            <div class="art-card">
-                <div class="image-box">
-                    <img src="https://images.unsplash.com" alt="Molduras de Gesso">
-                </div>
-                <div class="art-info">
-                    <h3>Molduras em Gesso</h3>
-                    <p>Estilo clássico e barroco com acabamento premium.</p>
+            <div class="card">
+                <div class="card-img"><img src="foto2.jpg" alt="Molduras de Gesso"></div>
+                <div class="card-body">
+                    <h3>Molduras de Gesso</h3>
+                    <p>O toque clássico que faltava na sua parede.</p>
                 </div>
             </div>
-
-            <div class="art-card">
-                <div class="image-box">
-                    <img src="https://images.unsplash.com" alt="Temas Personalizados">
-                </div>
-                <div class="art-info">
-                    <h3>Temas de Times</h3>
-                    <p>Bonecos e personagens personalizados com pintura rica em detalhes.</p>
+            <div class="card">
+                <div class="card-img"><img src="foto3.jpg" alt="Bonecos de Time"></div>
+                <div class="card-body">
+                    <h3>Times & Temas</h3>
+                    <p>Mascotes e personagens com pintura detalhada.</p>
                 </div>
             </div>
-
-            <div class="art-card">
-                <div class="image-box">
-                    <img src="https://images.unsplash.com" alt="Cofres de Gesso">
-                </div>
-                <div class="art-info">
+            <div class="card">
+                <div class="card-img"><img src="foto4.jpg" alt="Cofres de Gesso"></div>
+                <div class="card-body">
                     <h3>Cofres Decorativos</h3>
-                    <p>Porcos tradicionais em gesso reforçado em vários tamanhos.</p>
+                    <p>Os tradicionais porquinhos com brilho luxuoso.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="cta-luxury">
-            <h2>Encomende sua Peça Exclusiva</h2>
-            <p>Clique abaixo para iniciar seu pedido personalizado pelo WhatsApp.</p>
-            <div class="whatsapp-box">
-                <a href="https://wa.me/5531990681284" 
-                   target="_blank" rel="noopener noreferrer" class="btn-primary">
-                    <i class="fab fa-whatsapp"></i> ENCOMENDAR AGORA
-                </a>
-            </div>
-            <div class="email-direct">Ryogamsilva@gmail.com</div>
-        </section>
+    <!-- Seção Chamada Final (Conversão) -->
+    <section class="cta-final">
+        <div class="cta-container">
+            <h2>Pronto para dar vida ao seu projeto?</h2>
+            <p>O atendimento é feito pessoalmente via WhatsApp para definirmos cores, tamanhos e detalhes.</p>
+            <a href="https://wa.me?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="wa-large-btn">
+                <i class="fab fa-whatsapp"></i> INICIAR ORÇAMENTO AGORA
+            </a>
+        </div>
+    </section>
 
-        <footer class="simple-footer">
-            <p>Ryo Shopping Arts | 2026 | Ipatinga - MG</p>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <p><strong>Ryo Shopping Arts</strong></p>
+            <p>Ipatinga - Minas Gerais</p>
+            <p>Ryogamsilva@gmail.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
