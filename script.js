@@ -1,24 +1,21 @@
-// Animação de revelação ao rolar
-const reveal = () => {
-    const cards = document.querySelectorAll('.service-card, .order-section');
-    cards.forEach(card => {
-        const windowHeight = window.innerHeight;
-        const elementTop = card.getBoundingClientRect().top;
-        const elementVisible = 100;
-        
-        if (elementTop < windowHeight - elementVisible) {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.art-card, .cta-luxury');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, { threshold: 0.1 });
+
+    cards.forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(40px)";
+        el.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
+        observer.observe(el);
     });
-}
 
-// Configuração inicial das animações
-document.querySelectorAll('.service-card, .order-section').forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    el.style.transition = "all 0.8s ease-out";
+    console.log("Ryo Shopping Arts 2026 - Site Oficial Ativo");
 });
-
-window.addEventListener("scroll", reveal);
-window.onload = reveal;
