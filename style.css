@@ -46,18 +46,10 @@ h2 {
     color: #8B9467;
 }
 
-button {
-    background-color: #25D366;
-    color: #fff;
-    border: none;
-    padding: 1em 2em;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #1DA851;
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 1em;
 }
 
 footer {
@@ -66,28 +58,4 @@ footer {
     padding: 1em;
     text-align: center;
     clear: both;
-}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-}
-
-.container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  color: #333;
-  text-align: center;
-}
-
-p {
-  color: #666;
-  text-align: center;
 }
