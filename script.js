@@ -1,31 +1,18 @@
-// Menu responsivo
-const menu = document.getElementById('menu');
-const menuToggle = document.createElement('button');
-menuToggle.textContent = 'Menu';
-menuToggle.classList.add('menu-toggle');
-menu.appendChild(menuToggle);
+document.addEventListener('DOMContentLoaded', () => {
+    // Revelação de elementos ao rolar
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.1 });
 
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Efeito de rolagem suave
-const links = document.querySelectorAll('a[href^="#"]');
-links.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+    // Header fixo muda de cor
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.style.backgroundColor = window.scrollY > 50 ? '#1a252f' : '#2c3e50';
     });
-});
-
-// Formulário de contato
-const formContato = document.getElementById('form-contato');
-formContato.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
-    console.log(`Nome: ${nome}, Email: ${email}, Mensagem: ${mensagem}`);
-    alert('Mensagem enviada com sucesso!');
 });
