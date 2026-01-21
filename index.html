@@ -1,65 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RyoShopingArts - Portfólio</title>
+    <title>Ryo shopping Arts | Artesanato e Tecnologia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
 </head>
 <body>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me" class="whatsapp-float" target="_blank" aria-label="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <header>
-        <h1>RyoShopingArts</h1>
-        <nav id="menu">
-            <ul>
-                <li><a href="                      
-                <li><a href="#eva">Flores de EVA</a></li>
-                <li><a href="                                 
+        <nav class="navbar">
+            <div class="logo">Ryo <span>shopping Arts</span></div>
+            <ul class="nav-links">
+                <li><a href="#portfolio">Produtos</a></li>
+                <li><a href="#manutencao">Manutenção</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="servicos">
-            <h2>Nossos Serviços</h2>
-            <div class="servicos-container">
-                <div class="servico">
-                    <h3>Gesso</h3>
-                    <p>Bonecos, decorações, potes... Feitos à mão com amor!</p>
-                    <img src="https:                                               
-                    <img src="https://picsum.photos/200/301" alt="Peças de Gesso">
-                    <img src="https:                                               
-                </div>
-                <div class="servico">
-                    <h3>Flores de EVA</h3>
-                    <p>Decorações delicadas e personalizadas.</p>
-                    <img src="https://picsum.photos/200/400" alt="Flores de EVA">
-                    <img src="https:                                             
-                    <img src="https://picsum.photos/200/402" alt="Flores de EVA">
-                </div>
-                <div class="servico">
-                    <h3>Assistência Técnica</h3>
-                    <p>Consertos e reparos de equipamentos eletrônicos.</p>
-                    <img src="https:                                           
-                </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Arte em Gesso, Aço e Flores EVA</h1>
+            <p>Peças exclusivas e assistência técnica em Ipatinga e região. Fale conosco em 2026!</p>
+            <a href="#portfolio" class="btn-primary">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PRODUTOS -->
+    <section id="portfolio" class="section-container">
+        <h2 class="reveal">Nosso Catálogo</h2>
+        <div class="grid-portfolio">
+            <div class="card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com');"></div>
+                <h3>Flores EVA & Vasos</h3>
+                <p>Arranjos montados para decoração durável.</p>
+                <a href="https://wa.me?text=Olá! Vi o site da Ryo shopping Arts e quero saber mais sobre as flores." class="btn-whatsapp" target="_blank">Consultar</a>
             </div>
-        </section>
-        <section id="contato">
-            <h2>Entre em Contato</h2>
-            <p>Email: <a href="mailto:ryogamsilva@gmail.com">ryogamsilva@gmail.com</a></p>
-            <p>Telefone: <a href="https://wa.me/5531990681284">(31) 9 9068-1284</a></p>
-            <form id="form-contato">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+            
+            <div class="card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com');"></div>
+                <h3>Peças em Gesso</h3>
+                <p>Esculturas e peças sob medida para você.</p>
+                <a href="https://wa.me?text=Olá! Vi o site da Ryo shopping Arts e quero saber sobre as peças em gesso." class="btn-whatsapp" target="_blank">Consultar</a>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com');"></div>
+                <h3>Artigos em Aço</h3>
+                <p>Decoração moderna e resistente em metal.</p>
+                <a href="https://wa.me?text=Olá! Vi o site da Ryo shopping Arts e quero saber sobre os artigos em aço." class="btn-whatsapp" target="_blank">Consultar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO MANUTENÇÃO -->
+    <section id="manutencao" class="section-container bg-light">
+        <h2 class="reveal">Eletrônicos & Manutenção</h2>
+        <div class="grid-portfolio">
+            <div class="card reveal" style="padding: 20px;">
+                <div style="font-size: 3rem; color: #2c3e50; margin-bottom: 15px;"><i class="fas fa-microchip"></i></div>
+                <h3>Assistência Técnica</h3>
+                <p>Conserto de aparelhos com profissionalismo.</p>
+                <a href="https://wa.me?text=Olá! Preciso de um orçamento para manutenção de eletrônicos." class="btn-whatsapp" target="_blank">Solicitar Reparo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-container bg-dark">
+        <h2 class="reveal">Fale com a Ryo shopping Arts</h2>
+        <div class="contact-info">
+            <div class="contact-item reveal">
+                <i class="fas fa-envelope"></i>
+                <p>ryogamsilva@gmail.com</p>
+            </div>
+            <div class="contact-item reveal">
+                <i class="fab fa-whatsapp"></i>
+                <p>(31) 99068-1284</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 RyoShopingArts</p>
+        <p>&copy; 2026 Ryo shopping Arts - Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
