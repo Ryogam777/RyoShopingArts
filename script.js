@@ -1,5 +1,6 @@
+// Efeito de rolagem suave e animações de entrada
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.art-card, .cta-luxury');
+    const cards = document.querySelectorAll('.card, .feature-item');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -10,12 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
-    cards.forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(40px)";
-        el.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
-        observer.observe(el);
+    cards.forEach(card => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(30px)";
+        card.style.transition = "all 0.8s ease-out";
+        observer.observe(card);
     });
-
-    console.log("Ryo Shopping Arts 2026 - Site Oficial Ativo");
 });
