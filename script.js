@@ -1,18 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Revelação de elementos ao rolar
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Header fixo muda de cor
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        header.style.backgroundColor = window.scrollY > 50 ? '#1a252f' : '#2c3e50';
+// Animação de revelação ao rolar
+const reveal = () => {
+    const cards = document.querySelectorAll('.service-card, .order-section');
+    cards.forEach(card => {
+        const windowHeight = window.innerHeight;
+        const elementTop = card.getBoundingClientRect().top;
+        const elementVisible = 100;
+        
+        if (elementTop < windowHeight - elementVisible) {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }
     });
+}
+
+// Configuração inicial das animações
+document.querySelectorAll('.service-card, .order-section').forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "all 0.8s ease-out";
 });
+
+window.addEventListener("scroll", reveal);
+window.onload = reveal;
